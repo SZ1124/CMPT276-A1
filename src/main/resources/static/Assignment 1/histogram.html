@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shao Zhang's Assignment 1</title>
+    <link rel="stylesheet" href="histogram.css">
+    <script src="../Javascript/A1.js" defer></script>
+</head>
+<body>
+    <h1>Histogram Generator</h1>
+    <main class="wrapper">
+        <section class="LowerBounds">
+            <h3>Lower Bonds</h3>
+            <table id="lowerBoundsTable">
+                <tr>
+                    <th scope="row">Max</th>
+                    <td><input type="text" id="Max" value="100.00"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">A+</th>
+                    <td><input type="text" id="A+" value="95.00"></td>
+                </tr>
+                <tr>
+                    <th scope="row">A</th>
+                    <td><input type="text" id="A" value="90.00"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">A-</th>
+                    <td><input type="text" id="A-" value="85.00"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">B+</th>
+                    <td><input type="text" id="B+" value="80.00"/></td>
+                </tr>
+                <tr>               
+                    <th scope="row">B</th>
+                    <td><input type="text" id="B" value="75.00"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">B-</th>
+                    <td><input type="text" id="B-" value="70.00"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">C+</th>
+                    <td><input type="text" id="C+" value="65.00"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">C</th>
+                    <td><input type="text" id="C" value="60.00"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">C-</th>
+                    <td><input type="text" id="C-" value="55.00"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">D</th>
+                    <td><input type="text" id="D" value="50.00"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">F</th>
+                    <td><input type="text" id="F" value="0.00"/></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="Histogram">
+            <h3>Histogram</h3>
+            <table id="histogramTable">
+                <tr>
+                    <th scope="row">A+</th>
+                    <td id="printA+"></td>
+                </tr>
+                <tr>
+                    <th scope="row">A</th>
+                    <td id="printA"></td>
+                </tr>
+                <tr>
+                    <th scope="row">A-</th>
+                    <td id="printA-"></td>
+                </tr>
+                <tr>
+                    <th scope="row">B+</th>
+                    <td id="printB+"></td>
+                </tr>
+                <tr>               
+                    <th scope="row">B</th>
+                    <td id="printB"></td>
+                </tr>
+                <tr>
+                    <th scope="row">B-</th>
+                    <td id="printB-"></td>
+                </tr>
+                <tr>
+                    <th scope="row">C+</th>
+                    <td id="printC+"></td>
+                </tr>
+                <tr>
+                    <th scope="row">C</th>
+                    <td id="printC"></td>
+                </tr>
+                <tr>
+                    <th scope="row">C-</th>
+                    <td id="printC-"></td>
+                </tr>
+                <tr>
+                    <th scope="row">D</th>
+                    <td id="printD"></td>
+                </tr>
+                <tr>
+                    <th scope="row">F</th>
+                    <td id="printF"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="User-Input">
+            <form>
+                New Grade: <input id="userInput" type="text" />
+                <input type="submit" style="visibility: hidden;" value="SEND">
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

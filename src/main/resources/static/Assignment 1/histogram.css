@@ -1,0 +1,93 @@
+body
+{
+    margin: auto;
+    max-width: 800px;
+}
+
+.wrapper
+{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 420px 200px 200px;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.LowerBounds
+{
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.User-Input 
+{
+    grid-column: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.Histogram
+{
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+section
+{
+    background-color: rgb(230, 242, 246);
+}
+
+h3
+{
+    color: rgb(209, 11, 11);
+    padding-left: 15px;
+    margin-top: 13px;
+}
+
+table
+{
+    padding-left: 25px;
+}
+
+.lowerBoundsTable tr
+{
+    gap: 10px;
+}
+
+form
+{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+table, th, td
+{
+    text-align: left;
+}
+
+.LowerBounds th, .LowerBounds td
+{
+    padding: 6px;
+    padding-right: 80px;
+}
+
+#histogramTable th, #histogramTable td
+{
+    padding: 4px;
+    padding-right: 100px;
+}
+
+.LowerBounds input
+{
+    text-align: right;
+    padding-right: 10px;
+    width: 60px;
+    height: 25px;
+}
+
+.User-Input input
+{
+    height: 25px;
+}
