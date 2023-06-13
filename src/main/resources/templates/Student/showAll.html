@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shawn Zhang's Assignment 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <main style="display: grid; grid-template-columns: 1.0fr 1.0fr; grid-template-rows: 400px 400px; margin-top: 60px; margin-right: 50px; margin-left: 50px;">
+        <div style="grid-column-start: 1; grid-column-end: 2;grid-row-start: 1; grid-row-end: 2;">
+            <h1 style="margin-left: 100px;">Students</h1>
+
+            <table id="studentstable" style="width: 700px; border: 2px groove red; margin-right: 100px; margin-left: 100px; border-spacing: 30px;">
+                <tr>
+                    <th style="padding-right: 20px; text-align: center;">Name</th>
+                    <th style="padding-right: 20px; text-align: center;">Weight</th>
+                    <th style="padding-right: 20px; text-align: center;">Height</th>
+                    <th style="padding-right: 20px; text-align: center;">Hair Color</th>
+                    <th style="padding-right: 20px; text-align: center;">GPA</th>
+                    <th style="padding-right: 20px; text-align: center;">🤝 Friends 🤝</th>
+                </tr>
+
+                <tr th:each="student:${us}">
+                    <form th:action="@{/student/view/edit/{id}(id=${student.sid})}" method="get">
+                        <td style="padding-left: 10px; padding-bottom: 10px; text-align: center;"><input style="width:120px;" type="text" th:value="${student.name}" name="editName"></input></td>
+                        <td style="padding-bottom: 10px; text-align: center;"><input style="width:70px;" type="number" th:value="${student.weight}" name="editWeight"></input></td>
+                        <td style="padding-bottom: 10px; text-align: center;"><input style="width:70px;" type="number" th:value="${student.height}"  name="editHeight"></input></td>
+                        <td style="padding-bottom: 10px; text-align: center;"><input style="width:70px;" type="text" th:value="${student.haircolor}"  name="editHaircolor"></input></td>
+                        <td style="padding-bottom: 10px; text-align: center;"><input style="width:70px;" type="float" th:value="${student.gpa}"  name="editGpa"></input></td>
+                        <td style="padding-right: 10px; padding-bottom: 10px; text-align: center;"><input style="width:70px;" type="number" th:value="${student.friends}" name="editFriends"></input></td>
+
+                        <td style="padding-bottom: 10px;"><input class="btn btn-primary" style="height: 40px;width: 135px; text-align: left;" type="submit" value="Update Change"></input></td>
+                    </form>
+
+                    <td style="padding-bottom: 10px;">
+                        <form th:action="@{/student/view/delete/{id}(id=${student.sid})}" method="get">
+                            <input class="btn btn-primary" style="height: 40px; margin-right:10px; width: 100px; text-align: center;" type="submit" value="REMOVE"></input>
+                        </form>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div style="grid-column: 2; grid-row-start: 1; grid-row-end: 2;" >
+            <form action="/student/add" method="post">
+                    
+                <div class="mb-3">
+                    <input type="text" style="width: 300px;" id="name" name="name" class="form-control form-control-lg" 
+                        placeholder="Name">
+                </div>
+                <div class="mb-3">
+                    
+                    <input type="number" style="width: 300px;" id="weight" name="weight" class="form-control form-control-lg" 
+                        placeholder="Weight (kg)">
+                </div>
+                <div class="mb-3">
+                    
+                    <input type="number" style="width: 300px;" id="height" name="height" class="form-control form-control-lg" 
+                        placeholder="Height (cm)">
+                </div>
+                <div class="mb-3">
+                    
+                    <input type="text" style="width: 300px;" id="haircolor" name="haircolor" class="form-control form-control-lg" 
+                        placeholder="Hair Color">
+                </div>
+                <div class="mb-3">
+                    
+                    <input type="float" style="width: 300px;" id="gpa" step="any" name="gpa" class="form-control form-control-lg" 
+                        placeholder="GPA">
+                </div>
+                <div class="mb-3">
+                    
+                    <input type="number" style="width: 300px;" id="friends" name="friends" class="form-control form-control-lg" 
+                        placeholder="How many friends in school">
+                </div>
+                <!-- Submit button -->
+                
+                <div class="d-grid gap-2">
+                    <input class="btn btn-primary" style=" width: 300px;" type="submit" value="Add Student"></input>
+                </div>
+            </form>
+
+            <form action="/student/display" method="get" style="margin-top: 10px;">
+                <div class="d-grid gap-2">
+                    <input class="btn btn-primary" style=" width: 300px;" type="submit" value="Display Student"></input>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
