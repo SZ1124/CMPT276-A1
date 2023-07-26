@@ -1,0 +1,190 @@
+header
+{
+    text-align: center;
+}
+
+.Tabs
+{
+    border: 4mm ridge rgba(17, 140, 79, .6);
+    text-align: center;
+    width: auto;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Tabs nav ul
+{
+    text-align: center;
+}
+
+.Footer
+{
+    text-align: center; 
+}
+
+.Tabs nav ul, .Footer nav ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Tabs nav li, .Footer nav li
+{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+.grid-container
+{
+    padding: 30px;
+}
+
+.CurrentCumulativeTotal
+{
+    border: 4mm ridge rgba(17, 140, 79, 0.6);
+    margin-bottom: 10px;
+}
+
+.Goals
+{
+    border: 4mm ridge rgba(17, 140, 79, .6);
+    margin-bottom: 10px;
+}
+
+.MajorHeadlines
+{
+    border: 4mm ridge rgba(17, 140, 79, .6);
+    margin-bottom: 10px;
+}
+
+.Stock
+{
+    border: 4mm ridge rgba(17, 140, 79, .6);
+    margin-bottom: 10px;
+}
+
+.MonthlyBalance
+{
+    border: 4mm ridge rgba(17, 140, 79, .6);
+    margin-bottom: 10px;
+}
+
+h4
+{
+    padding-left: 5px;
+}
+
+h1
+{
+    color: gold;
+	font-size: 40px;
+	-webkit-text-stroke: 1px black;
+}
+
+button
+{
+  font-size: 15px;
+  font-weight: 150;
+  letter-spacing: 1px;
+  padding: 5px 15px 5px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 10px;
+}
+
+button:after {
+  content: "";
+  background-color: rgba(17, 140, 79, .6);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+
+@media screen and (min-width: 1000px)
+{
+    body 
+    {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    header
+    {
+        text-align: left;
+    }
+
+    .Tabs nav ul
+    {
+        text-align: right;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .Footer nav ul 
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-container
+    {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+    }
+
+    .CurrentCumulativeTotal
+    {
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+
+    .Goals
+    {
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+
+    .MajorHeadlines
+    {
+        grid-row-start: 2;
+        grid-column-start: span 2;
+    }
+
+    .Stock
+    {
+        grid-row-start: 3;
+        grid-column-start: 1;
+    }
+
+    .MonthlyBalance
+    {
+        grid-row-start: 3;
+        grid-column-start: 2;
+    }
+
+    button 
+    {
+        margin: 0;
+    }
+}

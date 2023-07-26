@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Interest Calculator</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="interestCalc.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Interest Calculator</h1>
+    </header>
+
+    <div class="container">
+      
+      <div class="calculation">
+        <div class="input-wrapper">
+          <div class="wrapper">
+            <label for="principal">Principal($):</label>
+            <input type="number" id="principal" value="1000" />
+          </div>
+
+          <div class="wrapper">
+            <label for="rate">Rate:</label>
+            <input type="number" id="rate" value="5" />
+          </div>
+        </div>
+
+        <div class="time-wrapper">
+          <label for="time">Time:</label>
+          <input type="number" id="time" value="1" />
+          <select name="duration" id="duration">
+            <option value="year">Year</option>
+            <option value="month">Month</option>
+          </select>
+          <button class="button" id="calculate-btn">Calculate</button>
+        </div>
+      <div>
+
+      <div id="result"></div>
+    </div>
+    <!-- Script -->
+    <script src="interestCalc.js"></script>
+  </body>
+</html>

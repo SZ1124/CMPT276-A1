@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Update Account Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href="updateBalance.css">
+    <script src='main.js'></script>
+</head>
+<body>
+    <header>
+        <h1>Update Your Account</h1>
+    </header>
+
+        <div class="update">
+            <form action="/monthlyIncome" method="post">
+                
+
+                <div>
+                    Update your Monthly Income:
+                    <input type="number" id="monthlyIncomeAmount" name="monthlyIncomeAmount" class="form-control form-control-lg" 
+                        placeholder="Monthly Income" step="0.01">
+
+                    <!-- Submit button -->
+                    
+                        <input class="button" type="submit" value="ENTER"></input>
+                </div>
+            </form>
+            <form action="/Income" method="post">
+                <div>
+                    Add any additional balance to your Account:
+                    <input type="text" id="income" name="income" class="form-control form-control-lg" 
+                        placeholder="Income">
+                    <input type="number" id="incomeAmount" name="incomeAmount" class="form-control form-control-lg" 
+                        placeholder="Amount" step="0.01">
+
+                    <!-- Submit button -->
+                    
+                    <input class="button" type="submit" value="ENTER"></input>
+                </div>
+            </form>
+            <form action="/monthlyExpenses" method="post">
+                <div>
+                    Enter each of your Monthly Expenses ($/month):
+                    <input type="text" id="monthlyExpense" name="monthlyExpense" class="form-control form-control-lg" 
+                        placeholder="Monthly Expense">
+
+                    <input type="number" id="monthlyExpenseAmount" name="monthlyExpenseAmount" class="form-control form-control-lg" 
+                        placeholder="Amount" step="0.01">
+                
+                <!-- Submit button -->
+                
+                    <input class="button" type="submit" value="ENTER"></input>
+                </div>
+            </form>
+
+            <form action="/expenses" method="post">
+                <div>
+                    Add the value of any additional one time expense:
+                    <input type="text" id="expense" name="expense" class="form-control form-control-lg" 
+                        placeholder="Expense">
+                    
+                    <input type="number" id="expenseAmount" name="expenseAmount" class="form-control form-control-lg" 
+                        placeholder="Amount" step="0.01">
+
+                    <!-- Submit button -->
+                    
+                        <input class="button" type="submit" value="ENTER"></input>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+</body>
+</html>

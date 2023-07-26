@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css"/>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Stock Buddy Login</h1>
+    </header>
+
+    <div class="Page">
+        <form action="/login" method="post">
+          <input type="text" id="uname" name="uname" placeholder="username" required /> <br />
+          <input type="password" id="upassword" name="upassword" placeholder="password" required /> <br />
+          <input class="button" type="submit" value="Login">
+          
+        </form>
+        <button class="button" type = "button" onclick="location.href = '/signup.html'"> Sign up</button>
+    </div>
+</body>
+</html>
